@@ -1,0 +1,11 @@
+framework module LivenessVerification {
+  umbrella header "LivenessVerification.h"
+
+  export *
+  module * { export * }
+}
+
+module LivenessVerification.Swift {
+    header "LivenessVerification-Swift.h"
+    requires objc
+}

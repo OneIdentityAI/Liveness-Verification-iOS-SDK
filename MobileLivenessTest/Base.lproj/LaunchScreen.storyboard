@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Caller View Controller-->
+        <scene sceneID="d8t-pr-ZV4">
+            <objects>
+                <viewController id="Yml-Fv-988" customClass="CallerViewController" customModule="MobileLivenessTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HCn-sc-PyY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on the button to trigger liveness" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmY-Cd-Nsp">
+                                <rect key="frame" x="64" y="202" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5m2-8V-lpo">
+                                <rect key="frame" x="124" y="302" width="166" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Liveness Verification"/>
+                                <connections>
+                                    <action selector="buttonLivenessClicked:" destination="Yml-Fv-988" eventType="touchUpInside" id="L0j-6e-nFb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cmY-Cd-Nsp" firstAttribute="centerX" secondItem="jLM-rv-qsp" secondAttribute="centerX" id="4Ms-73-6As"/>
+                            <constraint firstItem="5m2-8V-lpo" firstAttribute="centerX" secondItem="jLM-rv-qsp" secondAttribute="centerX" id="94W-Ly-lKY"/>
+                            <constraint firstItem="5m2-8V-lpo" firstAttribute="top" secondItem="cmY-Cd-Nsp" secondAttribute="bottom" constant="79" id="9M6-g6-vTI"/>
+                            <constraint firstItem="cmY-Cd-Nsp" firstAttribute="top" secondItem="jLM-rv-qsp" secondAttribute="top" constant="114" id="Eri-Tz-hJZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jLM-rv-qsp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wa5-av-0SX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrN-cp-p7d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MNi-Be-FpM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNJ-Nz-Psa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3PP-1E-CpB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Yml-Fv-988" kind="relationship" relationship="rootViewController" id="DJw-ec-JGW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rH2-WB-fKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1993" y="375"/>
+        </scene>
+    </scenes>
+</document>
