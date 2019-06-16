@@ -38,7 +38,7 @@ class ViewController: UIViewController
             viewController.token = "This is your wallet token"
             viewController.apikey = "This is your API Key"
             viewController.callback = { message in
-                //message is a JSON Response
+                //message in JSON Response
             }
             if let navigator = navigationController
 	    {
@@ -72,8 +72,8 @@ if let navigator = navigationController
 ```
 To receive the json response after the verification successful, add the following callback
 ```
-viewController.callback ={ message in
-    //message is a JSON Response
+viewController.callback = { message in
+    //message in JSON Response
 }
 ```
 Result will be as follow in json:
