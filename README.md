@@ -58,7 +58,7 @@ if let viewController = UIStoryboard(name: "LivenessStoryboard", bundle: framewo
 {
 }
 ```
-In order to ensure everything works, we will need to have an api key. You can obtain a [Free API Key Here]("https://dev.1id.ai")
+In order to ensure everything works, we will need to have an api key. You can obtain a [Free API Key Here](https://dev.1id.ai)
 ```
 viewController.token = "This is your wallet token"
 viewController.apikey = "This is your API Key"
